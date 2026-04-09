@@ -1,12 +1,11 @@
 {
   "routes": [
     {
-      "route": "/.auth/*",
-      "allowedRoles": ["anonymous", "authenticated"]
-    },
-    {
       "route": "/*",
-      "allowedRoles": ["authenticated"]
+      "allowedRoles": ["anonymous", "authenticated"]
     }
-  ]
+  ],
+  "navigationFallback": {
+    "rewrite": "/index.html"
+  }
 }
